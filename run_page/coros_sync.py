@@ -44,7 +44,7 @@ class Coros:
             "sec-fetch-site": "same-site",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
         }
-        data = {"account": self.account, "accountType": 2, "pwd": self.password}
+        data = {"account": self.ac count, "accountType": 2, "pwd": self.password}
         async with httpx.AsyncClient(timeout=TIME_OUT) as client:
             response = await client.post(url, json=data, headers=headers)
             resp_json = response.json()
